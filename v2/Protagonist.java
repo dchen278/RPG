@@ -40,17 +40,6 @@ public class Protagonist extends Character {
     public int getDefense() {
         return _defense;
     }
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    /**
-     * int attack(Monster) -- simulates attack on a Monster pre: Input not null
-     * post: Calculates damage to be inflicted, flooring at 0. Calls opponent's
-     * lowerHP() method to inflict damage. Returns damage dealt.
-     **/
-
-    /**
-     * void lowerHP(int) -- lowers life by input value pre: Input >= 0 post: Life
-     * instance var is lowered by input ammount.
-     **/
     // prepare a Protagonist for a special attack
     public void specialize() {
         _attack = .75;
