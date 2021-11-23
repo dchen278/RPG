@@ -24,11 +24,15 @@ public class Character {
     public void lowerHP(int amount) {
         _hitPts -= amount;
     }
+    public int getHealth(){
+   	 return _hitPts;
+    }
 
     public int attack(Character c) {
         System.out.println(c.getStrength());
         System.out.println(c.getAttack());
         System.out.println(c.getDefense());
+	System.out.println(c.getHealth());
         // System.out.println(c.getStrength());
         // System.out.println(c.getAttack());
         // System.out.println(c.getDefense());
