@@ -1,5 +1,5 @@
 /*
-  class Monster -- Represents random incarnations of 
+  class Monster -- Represents random incarnations of
   the adventurer's natural enemy in Ye Olde RPG
 **/
 
@@ -26,6 +26,14 @@ public class Monster extends Character {
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public int getDefense() {
         return _defense;
+    }
+
+    public int getStrength() {
+      return _strength;
+    }
+
+    public double getAttack() {
+      return _attack;
     }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
