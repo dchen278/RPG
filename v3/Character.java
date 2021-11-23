@@ -30,11 +30,6 @@ public class Character {
     }
 
     public int attack(Character c) {
-        System.out.println(c.getStrength());
-        System.out.println(c.getAttack());
-        System.out.println(c.getDefense());
-	      System.out.println(c.getHealth());
-
         int damage = (int)( (c.getStrength() * c.getAttack()) - c.getDefense() );
 
         if ( damage < 0 ) {
