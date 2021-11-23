@@ -52,4 +52,12 @@ public class Protagonist extends Character {
         _defense = 40;
     }
 
+    public int getStrength() {
+      return _strength;
+    }
+
+    public double getAttack() {
+      return _attack;
+    }
+
 }// end class Protagonist
