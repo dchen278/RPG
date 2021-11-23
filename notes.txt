@@ -1,0 +1,2 @@
+in class character, we need accessor methods to get the strength, attack, and defense of character c
+something is wrong with playTurn, because we are able to play more than the MAX_ENCOUNTERS

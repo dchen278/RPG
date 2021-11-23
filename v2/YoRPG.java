@@ -11,8 +11,11 @@
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  *
  * DISCO:
+ in class character, we need accessor methods to get the strength, attack, and defense of character c
+ something is wrong payTurn because it continues after health<0 and turn number can exceed its set maximum
  *
  * QCC:
+ Why does getHelth() not work but everything else deos
  *
  **********************************************/
 
