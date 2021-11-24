@@ -1,13 +1,24 @@
 public class Swordsman extends Protagonist {
   public Swordsman() {
+    super();
     _hitPts = 200;
-    _strength = 50;
+    _strength = 100;
     _defense = 65;
     _attack = .4;
   }
   public Swordsman(String name) {
       this();
       _name = name;
+  }
+  
+  public void specialize() {
+    _attack = .6;
+    _defense = 40;
+  }
+
+  public void normalize() {
+    _attack = .4;
+    _defense = 65;
   }
 
   public static String about() {

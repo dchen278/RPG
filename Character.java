@@ -3,7 +3,7 @@ public class Character {
     protected int _strength;
     protected int _defense;
     protected double _attack;
-
+    protected String _name;
 
     public Boolean isAlive() {
         return _hitPts > 0;
@@ -23,6 +23,10 @@ public class Character {
 
     public void lowerHP(int amount) {
         _hitPts -= amount;
+    }
+
+    public String getName() {
+        return _name;
     }
 
     public int getHealth(){

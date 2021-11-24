@@ -101,15 +101,17 @@ public class YoRPG {
     try {
       job = Integer.parseInt( in.readLine() );
       if (job == 1) {
-        pat = new Swordsman( name );
-        
+        pat = (Swordsman) new Swordsman( name );
       }
       if (job == 2) {
-        pat = new Archer( name );
+        pat = (Archer) new Archer( name );
+        // System.out.println(pat.about());
       }
       if (job == 3) {
         pat = new Spearman( name );
+        // System.out.println(pat.about());
       }
+      System.out.println(pat.about());
     }
     catch ( IOException e) { }
 
