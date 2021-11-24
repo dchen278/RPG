@@ -20,6 +20,7 @@ v3:
 
 v2:
 * Created accessor methods for each attribute of a Character.
+* Integrate given code with our preexisting code
 
 v1:
 * Created Character.java, a superclass for Monster.java and Protagonist.java
