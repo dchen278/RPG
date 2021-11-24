@@ -102,12 +102,18 @@ public class YoRPG {
       job = Integer.parseInt( in.readLine() );
       if (job == 1) {
         pat = new Swordsman( name );
+        Swordsman swordsman = (Swordsman) pat;
+        System.out.println(swordsman.about());
       }
       if (job == 2) {
         pat = new Archer( name );
+        Archer archer = (Archer) pat;
+        System.out.println(archer.about());
       }
       if (job == 3) {
         pat = new Spearman( name );
+        Spearman spearman = (Spearman) pat;
+        System.out.println(spearman.about());
       }
       // System.out.println(pat.about());
     }
