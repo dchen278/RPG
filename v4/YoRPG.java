@@ -101,17 +101,15 @@ public class YoRPG {
     try {
       job = Integer.parseInt( in.readLine() );
       if (job == 1) {
-        pat = (Swordsman) new Swordsman( name );
+        pat = new Swordsman( name );
       }
       if (job == 2) {
-        pat = (Archer) new Archer( name );
-        // System.out.println(pat.about());
+        pat = new Archer( name );
       }
       if (job == 3) {
         pat = new Spearman( name );
-        // System.out.println(pat.about());
       }
-      System.out.println(pat.about());
+      // System.out.println(pat.about());
     }
     catch ( IOException e) { }
 
@@ -137,7 +135,8 @@ public class YoRPG {
       System.out.println( "\nLo, yonder monster approacheth!" );
       int monst;
       //Random encounters!
-      monst = (int)(Math.random() * 3);
+      // random int between 1 and 3
+      monst = (int)(Math.random() * 3) + 1;
       if (monst == 0) {
         smaug = new Goblin();
       }

@@ -2,9 +2,9 @@ public class Ghoul extends Monster {
     public Ghoul() {
         super();
         _hitPts = 125;
-        _strength = (int)(Math.random() * 45) + 20;
+        _strength = 50;
         _defense = 40;
-        _attack = .4;
+        _attack = 1;
         _name = "Ghoul";
     }
 
