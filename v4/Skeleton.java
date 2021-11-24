@@ -4,7 +4,7 @@ public class Skeleton extends Monster {
         _hitPts = 100;
         _strength = (int)(Math.random() * 60) + 30;
         _defense = 30;
-        _attack = .1;
+        _attack = 2;
         _name = "Skeleton";
     }
 

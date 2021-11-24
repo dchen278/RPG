@@ -4,7 +4,7 @@ public class Spearman extends Protagonist {
     _hitPts = 150;
     _strength = 120;
     _defense = 40;
-    _attack = .4;
+    _attack = 1.5;
   }
 
   public Spearman(String name) {
@@ -13,12 +13,12 @@ public class Spearman extends Protagonist {
   }
 
   public void specialize() {
-    _attack = .6;
+    _attack = 2.5;
     _defense = 20;
   }
 
   public void normalize() {
-    _attack = .4;
+    _attack = 1.5;
     _defense = 40;
   }
 

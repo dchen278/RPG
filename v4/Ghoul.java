@@ -3,8 +3,8 @@ public class Ghoul extends Monster {
         super();
         _hitPts = 125;
         _strength = 50;
-        _defense = 40;
-        _attack = 1;
+        _defense = 60;
+        _attack = 1.4;
         _name = "Ghoul";
     }
 
