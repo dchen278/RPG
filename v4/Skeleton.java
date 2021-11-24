@@ -10,7 +10,7 @@ public class Skeleton extends Monster {
     }
 
     public static String about() {
-        return "Skeletons are tough and slow, but they are also very weak.";
+        return "Skeletons art tough and sloweth, but those gents art eke v'ry weak";
     }
     
 }

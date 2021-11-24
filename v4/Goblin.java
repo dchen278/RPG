@@ -10,8 +10,7 @@ public class Goblin extends Monster {
     }
 
     public static String about() {
-        return "Goblins are a common enemy of adventurers. They are weak in melee, but can be " +
-                "very difficult to kill.";
+        return "Goblins art a ingraft foe of adventur'rs.  Those gents art weak in melee, but can beest v'ry sore to killeth";
     }
     
 }

@@ -14,7 +14,7 @@ public class Ghoul extends Monster {
     }
 
     public static String about() {
-        return "Ghouls are undead creatures that are found in the sewers of the dungeon. ";
+        return "Ghouls art undead creatures yond art hath found in the seweth'rs of the dungeon.  Doth not receiveth closeth to those folk on the teen of potential death.";
     }
     
 }

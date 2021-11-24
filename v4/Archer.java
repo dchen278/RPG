@@ -17,7 +17,7 @@ public class Archer extends Protagonist {
   }
 
   public static String about() {
-    return "Archers are good at ranged attacks.";
+    return "Arch'rs art valorous at rang'd attacks.  Those gents suff'r und'r the blunt of melee weapons";
   }
 
 }

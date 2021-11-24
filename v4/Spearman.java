@@ -12,7 +12,7 @@ public class Spearman extends Protagonist {
   }
 
   public static String about() {
-    return "The Spearman is a melee class that deals a lot of damage.";
+    return "The spearman is a melee class yond deals a lot of damageth";
   }
 
 }
