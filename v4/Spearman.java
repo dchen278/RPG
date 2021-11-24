@@ -5,8 +5,14 @@ public class Spearman extends Protagonist {
     _defense = 40;
     _attack = .4;
   }
+
   public Spearman(String name) {
-      this();
-      _name = name;
+    this();
+    _name = name;
   }
+
+  public static String about() {
+    return "The Spearman is a melee class that deals a lot of damage.";
+  }
+
 }

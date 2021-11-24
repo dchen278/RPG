@@ -9,4 +9,9 @@ public class Swordsman extends Protagonist {
       this();
       _name = name;
   }
+
+  public static String about() {
+    return "The Swordsman is a good fighter, but not very strong.\n" +
+           "He has a high defense, but low strength.\n" +
+  }
 }
