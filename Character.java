@@ -1,12 +1,12 @@
 public class Character {
-    private int _hitPts;
-    private int _strength;
-    private int _defense;
-    private double _attack;
+    protected int _hitPts;
+    protected int _strength;
+    protected int _defense;
+    protected double _attack;
 
 
     public Boolean isAlive() {
-        return _hitPts <= 0;
+        return _hitPts > 0;
     }
 
     public int getDefense() {
@@ -25,12 +25,13 @@ public class Character {
         _hitPts -= amount;
     }
 
-    public int attack(Character c) {
-        // System.out.println(c.getStrength());
-        // System.out.println(c.getAttack());
-        // System.out.println(c.getDefense());
+    public int getHealth(){
+   	 return _hitPts;
+    }
 
-        int damage = (int)( (c.getStrength() * c.getAttack()) - c.getDefense() );
+    public int attack(Character c) {
+        //int damage = (int)( (c.getStrength() * c.getAttack()) - c.getDefense() );
+        int damage = (int)( (_strength * _attack - _defense )); //also functional
 
         if ( damage < 0 ) {
           damage = 0;

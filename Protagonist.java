@@ -5,11 +5,11 @@
 public class Protagonist extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    private String _name = "J. Doe";
-    private int _hitPts;
-    private int _strength;
-    private int _defense;
-    private double _attack;
+    protected String _name = "J. Doe";
+    // private int _hitPts;
+    // private int _strength;
+    // private int _defense;
+    // private double _attack;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     /**
@@ -17,10 +17,11 @@ public class Protagonist extends Character {
      * instance vars.
      **/
     public Protagonist() {
-        _hitPts = 125;
-        _strength = 100;
-        _defense = 40;
-        _attack = .4;
+        // super();
+        //_hitPts = 125;
+        //_strength = 100;
+        //_defense = 40;
+        //_attack = .4;
     }
 
     /**
@@ -40,17 +41,6 @@ public class Protagonist extends Character {
     public int getDefense() {
         return _defense;
     }
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    /**
-     * int attack(Monster) -- simulates attack on a Monster pre: Input not null
-     * post: Calculates damage to be inflicted, flooring at 0. Calls opponent's
-     * lowerHP() method to inflict damage. Returns damage dealt.
-     **/
-
-    /**
-     * void lowerHP(int) -- lowers life by input value pre: Input >= 0 post: Life
-     * instance var is lowered by input ammount.
-     **/
     // prepare a Protagonist for a special attack
     public void specialize() {
         _attack = .75;
@@ -61,6 +51,14 @@ public class Protagonist extends Character {
     public void normalize() {
         _attack = .4;
         _defense = 40;
+    }
+
+    public int getStrength() {
+      return _strength;
+    }
+
+    public double getAttack() {
+      return _attack;
     }
 
 }// end class Protagonist

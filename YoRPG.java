@@ -2,20 +2,28 @@
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
  * Required classes: Protagonist, Monster
- * 
+ *
  * USAGE:
  * Compile. Note messages generated.
  * Devise a plan of attack with your trio.
  * Code incrementally, testing each bit of new functionality as you go.
  * The only modification you should make to this driver file is moving comment bar down in main method, and filling in DISCO/QCC
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
- * 
+ *
  * DISCO:
  *
  * QCC:
- * 
+ *
+ *
  **********************************************/
-
+ /*********
+ OUR DRIVER MODS:
+  -Added additional initilization at beginning of the RPG. After asking for the name of the Protagonist, it then asks what class you want to be. There are 3 options: Swordsman, Archer, and Spearman.
+   Functionality is very similar to when you select your difficulty.
+  -Added random encounters that include the different monster subclasses.
+  -Changes mentioned above come with new variables added to make the process easier. Some examples include 'job' which holds an int and depending on its value, a new object of a subclass of protagonist
+   will be created. 'monst' is the Monster version of aformentioned variable.
+ ********/
 import java.io.*;
 import java.util.*;
 
@@ -50,18 +58,19 @@ public class YoRPG {
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-  
+
   // ~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~~~~~
 
   /*=============================================
     void newGame() -- gathers info to begin a new game
-    pre:  
-    post: according to user input, modifies instance var for difficulty 
+    pre:
+    post: according to user input, modifies instance var for difficulty
     and instantiates a Protagonist
     =============================================*/
   public void newGame() {
     String s;
     String name = "";
+    int job;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -84,8 +93,27 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
+    s = "\nOh great " + name + ", what type of of fighter are you?\n";
+    s += "\t1: Swordsman\n";
+    s += "\t2: Archer\n";
+    s += "\t3: Spearman\n";
+    System.out.print( s );
+    try {
+      job = Integer.parseInt( in.readLine() );
+      if (job == 1) {
+        pat = new Swordsman( name );
+      }
+      if (job == 2) {
+        pat = new Archer( name );
+      }
+      if (job == 3) {
+        pat = new Spearman( name );
+      }
+    }
+    catch ( IOException e) { }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    //pat = new Protagonist( name );
 
   }//end newGame()
 
@@ -104,8 +132,19 @@ public class YoRPG {
       System.out.println( "\nNothing to see here. Move along!" );
     else {
       System.out.println( "\nLo, yonder monster approacheth!" );
-
-      smaug = new Monster();
+      int monst;
+      //Random encounters!
+      monst = (int)(Math.random() * 3);
+      if (monst == 0) {
+        smaug = new Goblin();
+      }
+      if (monst == 1) {
+        smaug = new Ghoul();
+      }
+      if (monst == 2) {
+        smaug = new Skeleton();
+      }
+      //smaug = new Monster();
 
       while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -130,13 +169,13 @@ public class YoRPG {
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+        System.out.println( "\n" + smaug.getName() + " smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
       }//end while
 
       //option 1: you & the monster perish
       if ( !smaug.isAlive() && !pat.isAlive() ) {
-        System.out.println( "'Twas an epic battle, to be sure... " + 
+        System.out.println( "'Twas an epic battle, to be sure... " +
                             "You cut ye olde monster down, but " +
                             "with its dying breath ye olde monster. " +
                             "laid a fatal blow upon thee." );
@@ -160,7 +199,7 @@ public class YoRPG {
 
 
   public static void main( String[] args ) {
-    //As usual, move the begin-comment bar down as you progressively 
+    //As usual, move the begin-comment bar down as you progressively
     //test each new bit of functionality...
 
     //loading...

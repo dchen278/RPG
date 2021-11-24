@@ -1,15 +1,15 @@
 /*
-  class Monster -- Represents random incarnations of 
+  class Monster -- Represents random incarnations of
   the adventurer's natural enemy in Ye Olde RPG
 **/
 
 public class Monster extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    private int _hitPts;
-    private int _strength;
-    private int _defense;
-    private double _attack;
+    // private int _hitPts;
+    // private int _strength;
+    // private int _defense;
+    // private double _attack;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     /**
@@ -17,6 +17,7 @@ public class Monster extends Character {
      * instance vars.
      **/
     public Monster() {
+        // super();
         _hitPts = 150;
         _strength = 20 + (int) (Math.random() * 45); // [20,65)
         _defense = 20;
@@ -26,6 +27,14 @@ public class Monster extends Character {
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public int getDefense() {
         return _defense;
+    }
+
+    public int getStrength() {
+      return _strength;
+    }
+
+    public double getAttack() {
+      return _attack;
     }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
