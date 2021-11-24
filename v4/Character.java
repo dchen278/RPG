@@ -36,7 +36,7 @@ public class Character {
 
     public int attack(Character c) {
         //int damage = (int)( (c.getStrength() * c.getAttack()) - c.getDefense() );
-        System.out.print(c._strength);
+        System.out.print(c.getStrength());
         int damage = (int)( (_strength * _attack - _defense )); //also functional
 
         if ( damage < 0 ) {

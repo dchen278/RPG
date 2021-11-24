@@ -102,6 +102,7 @@ public class YoRPG {
       job = Integer.parseInt( in.readLine() );
       if (job == 1) {
         pat = new Swordsman( name );
+        System.out.print((Swordsman)pat.about();
       }
       if (job == 2) {
         pat = new Archer( name );
@@ -109,7 +110,7 @@ public class YoRPG {
       if (job == 3) {
         pat = new Spearman( name );
       }
-      // System.out.println(pat.about());
+      //System.out.println(pat.about());
     }
     catch ( IOException e) { }
 
