@@ -3,8 +3,8 @@ public class Goblin extends Monster {
         super();
         _hitPts = 60;
         _strength = (int)(Math.random() * 30) + 10;
-        _defense = 10;
-        _attack = .4;
+        _defense = 30;
+        _attack = 1.5;
         _name = "Goblin";
     }
 

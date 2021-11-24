@@ -1,5 +1,6 @@
 public class Archer extends Protagonist {
   public Archer() {
+    super();
     _hitPts = 100;
     _strength = 200;
     _defense = 20;
@@ -14,6 +15,11 @@ public class Archer extends Protagonist {
   public void specialize() {
     _attack = .9;
     _defense = 10;
+  }
+
+  public void normalize() {
+    _attack = .4;
+    _defense = 20;
   }
 
   public static String about() {

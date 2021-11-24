@@ -5,6 +5,7 @@ public class Character {
     protected double _attack;
     protected String _name;
 
+
     public Boolean isAlive() {
         return _hitPts > 0;
     }
@@ -26,7 +27,7 @@ public class Character {
     }
 
     public String getName() {
-        return _name;
+      return _name;
     }
 
     public int getHealth(){
