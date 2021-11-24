@@ -11,13 +11,17 @@ v4:
 * Modified YoRPG driver class to allow player to choose one of the Protagonist subclasses and incorporated random encounters with Monster subclasses.
 * Subclasses for Protagonist and Monster have new about() method that returns a description of the class.
 * Added Driver Mods to YoRPG.java
+
 v3:
 * Fixed bugs in Character.java from v2.
 * Instance variables protection changed from public to protected.
+
 v2:
 * Created accessor methods for each attribute of a Character.
+
 v1:
 * Created Character.java, a superclass for Monster.java and Protagonist.java
+
 v0:
 * Made YoRPG compilable.
 * Added Monster.java and Protagonist.java
