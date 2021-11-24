@@ -6,21 +6,21 @@
 ## Changelog:
 
 v4:
--Latest version, located in main directory.
--Added subclasses for Protagonist and Monster
--Modified YoRPG driver class to allow player to choose one of the Protagonist subclasses and incorporated random encounters with Monster subclasses.
--Subclasses for Protagonist and Monster have new about() method that returns a description of the class.
--Added Driver Mods to YoRPG.java
+*Latest version, located in main directory.
+*Added subclasses for Protagonist and Monster
+*Modified YoRPG driver class to allow player to choose one of the Protagonist subclasses and incorporated random encounters with Monster subclasses.
+*Subclasses for Protagonist and Monster have new about() method that returns a description of the class.
+*Added Driver Mods to YoRPG.java
 v3:
--Fixed bugs in Character.java from v2.
--Instance variables protection changed from public to protected.
+*Fixed bugs in Character.java from v2.
+*Instance variables protection changed from public to protected.
 v2:
--Created accessor methods for each attribute of a Character.
+*Created accessor methods for each attribute of a Character.
 v1:
--Created Character.java, a superclass for Monster.java and Protagonist.java
+*Created Character.java, a superclass for Monster.java and Protagonist.java
 v0:
--Made YoRPG compilable.
--Added Monster.java and Protagonist.java
+*Made YoRPG compilable.
+*Added Monster.java and Protagonist.java
 
 ## New Classes:
 
@@ -40,11 +40,11 @@ Monster: Subclass of Character. Represents the enemies you encounter in the RPG.
 	Skeleton: Subclass of Monster. One of the stronger enemies you can encounter.
 
 ## Future Changes:
--Add unique skills for Protagonists and Monsters
+*Add unique skills for Protagonists and Monsters
   -Basically when skill is used, a String will be printed describing the skill and it will do different things depending on its purpose.
   -For example, a healing spell so you can recover during battle.
--An option to run from battle when you don't think you can win.
--Boss battles!
--Different armor and weapons so you can powerup your man.
+*An option to run from battle when you don't think you can win.
+*Boss battles!
+*Different armor and weapons so you can powerup your man.
 
 
