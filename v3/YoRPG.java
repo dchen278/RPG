@@ -1,3 +1,4 @@
+
 /**********************************************
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
@@ -11,19 +12,14 @@
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  *
  * DISCO:
+ in class character, we need accessor methods to get the strength, attack, and defense of character c
+ something is wrong payTurn because it continues after health<0 and turn number can exceed its set maximum
  *
  * QCC:
- *
+ Why does getHelth() not work but everything else deos
  *
  **********************************************/
- /*********
- OUR DRIVER MODS:
-  -Added additional initilization at beginning of the RPG. After asking for the name of the Protagonist, it then asks what class you want to be. There are 3 options: Swordsman, Archer, and Spearman.
-   Functionality is very similar to when you select your difficulty.
-  -Added random encounters that include the different monster subclasses.
-  -Changes mentioned above come with new variables added to make the process easier. Some examples include 'job' which holds an int and depending on its value, a new object of a subclass of protagonist
-   will be created. 'monst' is the Monster version of aformentioned variable.
- ********/
+
 import java.io.*;
 import java.util.*;
 
@@ -70,7 +66,6 @@ public class YoRPG {
   public void newGame() {
     String s;
     String name = "";
-    int job;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -93,28 +88,8 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
-    s = "\nOh great " + name + ", what type of of fighter are you?\n";
-    s += "\t1: Swordsman\n";
-    s += "\t2: Archer\n";
-    s += "\t3: Spearman\n";
-    System.out.print( s );
-    try {
-      job = Integer.parseInt( in.readLine() );
-      if (job == 1) {
-        pat = new Swordsman( name );
-      }
-      if (job == 2) {
-        pat = new Archer( name );
-      }
-      if (job == 3) {
-        pat = new Spearman( name );
-      }
-      // System.out.println(pat.about());
-    }
-    catch ( IOException e ) { }
-
     //instantiate the player's character
-    //pat = new Protagonist( name );
+    pat = new Protagonist( name );
 
   }//end newGame()
 
@@ -133,20 +108,8 @@ public class YoRPG {
       System.out.println( "\nNothing to see here. Move along!" );
     else {
       System.out.println( "\nLo, yonder monster approacheth!" );
-      int monst;
-      //Random encounters!
-      // random int between 1 and 3
-      monst = (int)(Math.random() * 3) + 1;
-      if (monst == 0) {
-        smaug = new Goblin();
-      }
-      if (monst == 1) {
-        smaug = new Ghoul();
-      }
-      if (monst == 2) {
-        smaug = new Skeleton();
-      }
-      //smaug = new Monster();
+
+      smaug = new Monster();
 
       while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -171,7 +134,7 @@ public class YoRPG {
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + smaug.getName() + " smacked " + pat.getName() +
+        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
       }//end while
 
