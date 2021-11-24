@@ -11,14 +11,19 @@
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  *
  * DISCO:
- in class character, we need accessor methods to get the strength, attack, and defense of character c
- something is wrong payTurn because it continues after health<0 and turn number can exceed its set maximum
  *
  * QCC:
- Why does getHelth() not work but everything else deos
+ *
  *
  **********************************************/
-
+ /*********
+ OUR DRIVER MODS:
+  -Added additional initilization at beginning of the RPG. After asking for the name of the Protagonist, it then asks what class you want to be. There are 3 options: Swordsman, Archer, and Spearman.
+   Functionality is very similar to when you select your difficulty.
+  -Added random encounters that include the different monster subclasses.
+  -Changes mentioned above come with new variables added to make the process easier. Some examples include 'job' which holds an int and depending on its value, a new object of a subclass of protagonist
+   will be created. 'monst' is the Monster version of aformentioned variable.
+ ********/
 import java.io.*;
 import java.util.*;
 
@@ -215,4 +220,3 @@ public class YoRPG {
   }//end main
 
 }//end class YoRPG
-
