@@ -127,8 +127,19 @@ public class YoRPG {
       System.out.println( "\nNothing to see here. Move along!" );
     else {
       System.out.println( "\nLo, yonder monster approacheth!" );
-
-      smaug = new Monster();
+      int monst;
+      //Random encounters!
+      monst = (int)(Math.random() * 3);
+      if (monst == 0) {
+        smaug = new Goblin();
+      }
+      if (monst == 1) {
+        smaug = new Ghoul();
+      }
+      if (monst == 2) {
+        smaug = new Skeleton();
+      }
+      //smaug = new Monster();
 
       while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -153,7 +164,7 @@ public class YoRPG {
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+        System.out.println( "\n" + smaug.getName() + " smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
       }//end while
 
