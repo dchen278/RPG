@@ -6,7 +6,7 @@ public class Character {
     protected String _name;
 
 
-    public Boolean isAlive() {
+    public boolean isAlive() {
         return _hitPts > 0;
     }
 
@@ -36,7 +36,6 @@ public class Character {
 
     public int attack(Character c) {
         //int damage = (int)( (c.getStrength() * c.getAttack()) - c.getDefense() );
-        System.out.print(c._strength);
         int damage = (int)( (_strength * _attack - _defense )); //also functional
 
         if ( damage < 0 ) {
