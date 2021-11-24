@@ -21,12 +21,14 @@ v3:
 v2:
 * Created accessor methods for each attribute of a Character.
 * Integrate given code with our preexisting code
+* Fix bugs in code (`isAlive()`)
 
 v1:
 * Created Character.java, a superclass for Monster.java and Protagonist.java
 
 v0:
 * Made YoRPG compilable.
+* Added our existing implementation
 * Added Monster.java and Protagonist.java
 
 ## New Classes:
