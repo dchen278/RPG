@@ -24,6 +24,8 @@ public class Monster extends Character {
         _attack = 1;
     }
 
+    
+
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public int getDefense() {
         return _defense;

@@ -102,6 +102,7 @@ public class YoRPG {
       job = Integer.parseInt( in.readLine() );
       if (job == 1) {
         pat = new Swordsman( name );
+        
       }
       if (job == 2) {
         pat = new Archer( name );
